@@ -16,4 +16,4 @@ python3 main.py
 
 ## The entry
 
-> So... do you also pretend to install a firmware update in here so nobody talks to you?
+> So... do you also fake a firmware update in here so nobody talks to you? Asking for a friend on floor nine.

@@ -3,10 +3,13 @@
 
 import os
 
-ENTRY = "So... do you also pretend to install a firmware update in here so nobody talks to you?"
+ENTRY = "So... do you also fake a firmware update in here so nobody talks to you? Asking for a friend on floor nine."
 
 
 def main():
+    # Gate: /output/entry.txt must be UTF-8 text of 1 to 200 characters, one line.
+    assert 1 <= len(ENTRY) <= 200, f"entry is {len(ENTRY)} chars"
+    assert "\n" not in ENTRY, "entry must be a single line"
     out_dir = os.environ.get("OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, "entry.txt")
